@@ -4,19 +4,19 @@
   "workday:Blizzard",
   "workday:Epic Games"
  ],
- "boards_ok": 85,
+ "boards_ok": 98,
  "dropped": {
   "duplicate": 5,
   "location": 209,
   "not remote": 120,
-  "old": 48,
-  "onsite": 27,
-  "role": 1787,
+  "old": 52,
+  "onsite": 28,
+  "role": 1826,
   "seniority": 15
  },
  "kept": 38,
- "new": 2,
- "postings": 2249,
- "run": "2026-09-29T17:59:07Z",
- "seconds": 40
+ "new": 0,
+ "postings": 2293,
+ "run": "2026-09-29T18:10:05Z",
+ "seconds": 82
 }

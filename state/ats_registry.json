@@ -33,9 +33,20 @@
  },
  "abbey games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Abbey Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "acclaro": {
   "ats": "workable",
@@ -46,9 +57,20 @@
  },
  "aesir interactive": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Aesir Interactive",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "altagram": {
   "ats": null,
@@ -58,9 +80,20 @@
  },
  "amanita design": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Amanita Design",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "amber studio": {
   "ats": null,
@@ -89,15 +122,37 @@
  },
  "anshar studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Anshar Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "appeal studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Appeal Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "applovin": {
   "ats": "greenhouse",
@@ -114,9 +169,20 @@
  },
  "artifex mundi": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Artifex Mundi",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "asobo studio": {
   "ats": null,
@@ -146,9 +212,20 @@
  },
  "beat games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Beat Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "beautifun games": {
   "ats": null,
@@ -192,9 +269,20 @@
  },
  "black forest games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Black Forest Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "black shamrock": {
   "ats": null,
@@ -217,9 +305,20 @@
  },
  "blindflug studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Blindflug Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "bloober team": {
   "ats": "recruitee",
@@ -230,21 +329,54 @@
  },
  "bohemia interactive": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Bohemia Interactive",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "bongfish": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Bongfish",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "bossa studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Bossa Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "bugbear entertainment": {
   "ats": null,
@@ -272,9 +404,20 @@
  },
  "bytro labs": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Bytro Labs",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "capcom": {
   "ats": null,
@@ -284,9 +427,20 @@
  },
  "cd projekt": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "CD Projekt",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "certain affinity": {
   "ats": null,
@@ -296,15 +450,32 @@
  },
  "chimera entertainment": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Chimera Entertainment",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "ci games": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "CI Games",
-  "slug": null
+  "slug": "cigames",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "cloud chamber": {
   "ats": "greenhouse",
@@ -321,9 +492,20 @@
  },
  "codemasters": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Codemasters",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "coffee stain studios": {
   "ats": "teamtailor",
@@ -356,15 +538,32 @@
  },
  "creative assembly": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Creative Assembly",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "creepy jar": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Creepy Jar",
-  "slug": null
+  "slug": "creepyjar",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "crowdin": {
   "ats": null,
@@ -393,15 +592,32 @@
  },
  "daedalic entertainment": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Daedalic Entertainment",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "deck13 interactive": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "personio",
+  "checked": "2026-09-29",
   "name": "Deck13 Interactive",
-  "slug": null
+  "slug": "deck13",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "deconstructeam": {
   "ats": null,
@@ -456,9 +672,20 @@
  },
  "digic pictures": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Digic Pictures",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "digit game studios": {
   "ats": null,
@@ -492,9 +719,20 @@
  },
  "dirtybit": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Dirtybit",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "discord": {
   "ats": "greenhouse",
@@ -525,9 +763,20 @@
  },
  "draw distance": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Draw Distance",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "dream games": {
   "ats": "greenhouse",
@@ -591,9 +840,20 @@
  },
  "fast travel games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Fast Travel Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "fatshark": {
   "ats": "teamtailor",
@@ -643,9 +903,20 @@
  },
  "fireproof games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Fireproof Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "firesprite": {
   "ats": "greenhouse",
@@ -656,21 +927,54 @@
  },
  "fishing cactus": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Fishing Cactus",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "flaregames": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Flaregames",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "flying wild hog": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Flying Wild Hog",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "focus entertainment": {
   "ats": "recruitee",
@@ -681,21 +985,54 @@
  },
  "fools theory": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Fools Theory",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "force field": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Force Field",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "frogwares": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Frogwares",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "frontier developments": {
   "ats": "lever_eu",
@@ -746,9 +1083,20 @@
  },
  "funcom": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Funcom",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "funplus": {
   "ats": null,
@@ -819,28 +1167,67 @@
  },
  "ghost ship games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Ghost Ship Games",
   "rejected": "greenhouse:ghost",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "goodgame studios": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Goodgame Studios",
-  "slug": null
+  "slug": "goodgamestudios",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "gsc game world": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "GSC Game World",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "guerrilla games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Guerrilla Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "habby": {
   "ats": null,
@@ -850,15 +1237,37 @@
  },
  "haemimont games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Haemimont Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "handygames": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "HandyGames",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "hangar 13": {
   "ats": "greenhouse",
@@ -869,9 +1278,20 @@
  },
  "happy volcano": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Happy Volcano",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "havok": {
   "ats": null,
@@ -920,16 +1340,33 @@
   "verified": 2
  },
  "innogames": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "lever_eu",
+  "checked": "2026-09-29",
   "name": "InnoGames",
-  "slug": null
+  "slug": "innogames",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "io interactive": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "IO Interactive",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "iron galaxy studios": {
   "ats": null,
@@ -939,9 +1376,20 @@
  },
  "iron gate studio": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Iron Gate Studio",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "jagex": {
   "ats": "lever",
@@ -965,17 +1413,38 @@
  },
  "kalypso media": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Kalypso Media",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "keen games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Keen Games",
   "rejected": "greenhouse:keen",
   "slug": null,
-  "verified": true
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "kevuru games": {
   "ats": null,
@@ -1009,15 +1478,37 @@
  },
  "king art games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "KING Art Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "klang games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Klang Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "klei entertainment": {
   "ats": null,
@@ -1053,9 +1544,20 @@
  },
  "landfall games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Landfall Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "larian studios": {
   "ats": "lever",
@@ -1084,11 +1586,17 @@
   "slug": null
  },
  "liquid swords": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Liquid Swords",
-  "rejected": "ashby:liquid",
-  "slug": null
+  "slug": "liquidswords",
+  "tried": [
+   "ashby",
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "localazy": {
   "ats": null,
@@ -1127,9 +1635,20 @@
  },
  "madfinger games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Madfinger Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "magic media": {
   "ats": "workable",
@@ -1181,9 +1700,20 @@
  },
  "megapop": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Megapop",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "mercurysteam": {
   "ats": null,
@@ -1221,9 +1751,20 @@
  },
  "mi pu mi games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Mi'pu'mi Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "milestone": {
   "ats": null,
@@ -1233,9 +1774,20 @@
  },
  "mimimi games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Mimimi Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "miniclip": {
   "ats": null,
@@ -1288,16 +1840,33 @@
  },
  "neocoregames": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "NeocoreGames",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "neon giant": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Neon Giant",
-  "rejected": "lever:neon",
-  "slug": null
+  "slug": "neongiant",
+  "tried": [
+   "lever",
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "nerd monkeys": {
   "ats": null,
@@ -1336,9 +1905,20 @@
  },
  "ninja theory": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Ninja Theory",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "nitro games": {
   "ats": null,
@@ -1360,9 +1940,20 @@
  },
  "nixxes software": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Nixxes Software",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "nomada studio": {
   "ats": null,
@@ -1383,9 +1974,20 @@
  },
  "nordcurrent": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Nordcurrent",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "novarama": {
   "ats": null,
@@ -1429,9 +2031,20 @@
  },
  "one more level": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "One More Level",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "outplay entertainment": {
   "ats": null,
@@ -1447,9 +2060,20 @@
  },
  "paladin studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Paladin Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "panic button": {
   "ats": "greenhouse",
@@ -1504,15 +2128,37 @@
  },
  "plarium": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Plarium",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "playdead": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Playdead",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "playground games": {
   "ats": "ashby",
@@ -1559,15 +2205,37 @@
  },
  "purple lamp studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Purple Lamp Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "qloc": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "QLOC",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "quantic dream": {
   "ats": null,
@@ -1577,15 +2245,32 @@
  },
  "rare": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Rare",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "raw fury": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Raw Fury",
-  "slug": null
+  "slug": "rawfury",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "redhill games": {
   "ats": null,
@@ -1640,9 +2325,20 @@
  },
  "rockfish games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Rockfish Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "rockstar games": {
   "ats": "greenhouse",
@@ -1653,9 +2349,20 @@
  },
  "rocksteady studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Rocksteady Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "roll7": {
   "ats": null,
@@ -1677,15 +2384,37 @@
  },
  "ronimo games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Ronimo Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "room 8 group": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Room 8 Group",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "rovio": {
   "ats": null,
@@ -1712,10 +2441,16 @@
   "verified": 2
  },
  "sandbox interactive": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Sandbox Interactive",
-  "slug": null
+  "slug": "sandboxinteractive",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "schell games": {
   "ats": null,
@@ -1732,9 +2467,20 @@
  },
  "scs software": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "SCS Software",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "second dinner": {
   "ats": "ashby",
@@ -1817,15 +2563,32 @@
  },
  "snapshot games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Snapshot Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "snowprint studios": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Snowprint Studios",
-  "slug": null
+  "slug": "snowprintstudios",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "socialpoint": {
   "ats": null,
@@ -1852,9 +2615,20 @@
  },
  "sperasoft": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Sperasoft",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "spiders": {
   "ats": null,
@@ -1864,15 +2638,37 @@
  },
  "splash damage": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Splash Damage",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "sports interactive": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Sports Interactive",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "square enix": {
   "ats": "workable",
@@ -1882,10 +2678,16 @@
   "verified": 2
  },
  "star stable entertainment": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Star Stable Entertainment",
-  "slug": null
+  "slug": "starstable",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "starloop studios": {
   "ats": null,
@@ -1895,9 +2697,20 @@
  },
  "starward industries": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Starward Industries",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "storm in a teacup": {
   "ats": null,
@@ -1907,9 +2720,20 @@
  },
  "stray fawn studio": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Stray Fawn Studio",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "streamline media group": {
   "ats": null,
@@ -1919,9 +2743,20 @@
  },
  "studio fizbin": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Studio Fizbin",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "studio gobo": {
   "ats": null,
@@ -1931,15 +2766,37 @@
  },
  "stunlock studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Stunlock Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "sumo digital": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Sumo Digital",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "supercell": {
   "ats": "ashby",
@@ -1950,9 +2807,20 @@
  },
  "superhot": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Superhot",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "supermassive games": {
   "ats": null,
@@ -1962,9 +2830,20 @@
  },
  "sybo games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Sybo Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "tactile games": {
   "ats": "greenhouse",
@@ -1981,9 +2860,20 @@
  },
  "techland": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Techland",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "ten square games": {
   "ats": "recruitee",
@@ -2025,9 +2915,20 @@
  },
  "the farm 51": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "The Farm 51",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "the game kitchen": {
   "ats": null,
@@ -2048,9 +2949,20 @@
  },
  "the outsiders": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "The Outsiders",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "theorycraft games": {
   "ats": "lever",
@@ -2061,21 +2973,54 @@
  },
  "thq nordic": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "THQ Nordic",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "thunderful": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Thunderful",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "toca boca": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Toca Boca",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "transifex": {
   "ats": null,
@@ -2108,16 +3053,28 @@
   ]
  },
  "travian games": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "personio",
+  "checked": "2026-09-29",
   "name": "Travian Games",
-  "slug": null
+  "slug": "traviangames",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "triband": {
-  "ats": null,
-  "checked": "2026-09-23",
+  "ats": "teamtailor",
+  "checked": "2026-09-29",
   "name": "Triband",
-  "slug": null
+  "slug": "triband",
+  "tried": [
+   "teamtailor",
+   "personio",
+   "lever_eu"
+  ],
+  "verified": 2
  },
  "tripledot studios": {
   "ats": "greenhouse",
@@ -2135,15 +3092,37 @@
  },
  "triumph studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Triumph Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "tt games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "TT Games",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "ubisoft": {
   "ats": null,
@@ -2215,11 +3194,21 @@
  },
  "vivid games": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Vivid Games",
   "rejected": "ashby:vivid",
   "slug": null,
-  "verified": true
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "voodoo": {
   "ats": "ashby",
@@ -2230,9 +3219,20 @@
  },
  "warhorse studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Warhorse Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "welocalize": {
   "ats": null,
@@ -2262,15 +3262,37 @@
  },
  "yager": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Yager",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "zen studios": {
   "ats": null,
-  "checked": "2026-09-23",
+  "checked": "2026-09-29",
   "name": "Zen Studios",
-  "slug": null
+  "slug": null,
+  "tried": [
+   "ashby",
+   "greenhouse",
+   "lever",
+   "lever_eu",
+   "personio",
+   "recruitee",
+   "smartrecruiters",
+   "teamtailor",
+   "workable"
+  ]
  },
  "zynga": {
   "ats": null,
