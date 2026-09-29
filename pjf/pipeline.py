@@ -3,28 +3,44 @@ from __future__ import annotations
 
 import time
 
-from . import ats, config, feeds, filters, page, state
+from .model import norm
+from . import ats, config, feeds, filters, page, remote_boards, state, workday
 
 
 def load_sources() -> dict:
     return state.load(config.SOURCES_FILE, {"feeds": [], "quick_links": []})
 
 
-def run(probe=40, use_ats=True, use_feeds=True, log=print) -> dict:
+def run(probe=40, use_ats=True, use_feeds=True, use_remote=True, use_workday=True,
+        log=print) -> dict:
     started = time.time()
     run_ts = state.now_ts()
     sources = load_sources()
     jobs, status = [], {}
 
+    companies = ats.load_companies(config.COMPANIES_FILE)
+    registry = state.load(config.REGISTRY_FILE, {})
+
+    # Order matters for duplicates: the first source to list a job keeps it.
     if use_ats:
-        registry = state.load(config.REGISTRY_FILE, {})
-        found, st = ats.collect(registry, ats.load_companies(config.COMPANIES_FILE), probe, log)
+        found, st = ats.collect(registry, companies, probe, log, manual=sources.get("boards", []))
         state.save(config.REGISTRY_FILE, registry)
+        jobs += found
+        status.update(st)
+
+    if use_workday and sources.get("workday"):
+        found, st = workday.collect(sources["workday"], log)
         jobs += found
         status.update(st)
 
     if use_feeds:
         found, st = feeds.collect(sources.get("feeds", []), log)
+        jobs += found
+        status.update(st)
+
+    if use_remote and sources.get("remote_boards"):
+        known = {norm(c) for c in companies} | {norm(e.get("name", "")) for e in registry.values()}
+        found, st = remote_boards.collect(sources["remote_boards"], known, log)
         jobs += found
         status.update(st)
 

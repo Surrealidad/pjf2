@@ -83,8 +83,10 @@ class FakeNet:
     def __init__(self, routes):
         self.routes, self.calls = dict(routes), []
 
-    def get(self, url, timeout=20, accept="*/*"):
+    def get(self, url, timeout=20, accept="*/*", data=None):
         self.calls.append(url)
+        if data is not None:   # POST: route on url + offset
+            url = f"{url}#{json.loads(data).get('offset', 0)}"
         if url not in self.routes:
             return 404, b""
         body = self.routes[url]
@@ -237,6 +239,97 @@ class TestPieces(Base):
         self.assertEqual(verdict("Remote - U.K."), "location")
         self.assertEqual(verdict("", desc="We are a remote-first studio."), "check")
         self.assertEqual(verdict("Remote", desc="Candidates must be located in Canada."), "location")
+
+
+TT_RSS = b"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:tt="https://teamtailor.com/locations"><channel><title>Fjord Games</title>
+<item><title>Senior Data Analyst</title><link>https://fjordgames.teamtailor.com/jobs/1</link>
+<pubDate>Mon, 21 Sep 2026 10:00:00 +0000</pubDate><description>Join Fjord Games.</description>
+<remoteStatus>fully</remoteStatus><tt:locations><tt:location><tt:city>Europe</tt:city></tt:location></tt:locations></item>
+<item><title>Lead Producer</title><link>https://fjordgames.teamtailor.com/jobs/2</link>
+<description>Fjord Games office.</description><remoteStatus>hybrid</remoteStatus>
+<tt:locations><tt:location><tt:city>Oslo</tt:city></tt:location></tt:locations></item>
+</channel></rss>"""
+PERSONIO = b"""<?xml version="1.0" encoding="UTF-8"?>
+<workzag-jobs><position><id>77</id><subcompany>Meseta Games SL</subcompany><office>Remote</office>
+<name>Localization Manager</name><jobDescriptions><jobDescription><name>About</name>
+<value><![CDATA[<p>Meseta Games makes RPGs.</p>]]></value></jobDescription></jobDescriptions>
+<createdAt>2026-09-20T10:00:00+00:00</createdAt></position></workzag-jobs>"""
+REMOTIVE = {"jobs": [
+    {"url": "https://remotive.test/1", "title": "Senior Data Analyst", "company_name": "Pixel Forge",
+     "publication_date": RECENT + "T00:00:00", "candidate_required_location": "Worldwide",
+     "description": "We build mobile games played by millions."},
+    {"url": "https://remotive.test/2", "title": "Senior Data Analyst", "company_name": "Acme Bank",
+     "candidate_required_location": "Worldwide", "description": "Banking."},
+    {"url": "https://remotive.test/3", "title": "Data Analyst Lead", "company_name": "Lucky Games",
+     "candidate_required_location": "Europe", "description": "Online casino and slots."},
+    {"url": "https://remotive.test/4", "title": "Producer", "company_name": "LeverCo",
+     "candidate_required_location": "Europe", "description": "Nothing about the product."},
+]}
+WD_API = "https://acme.wd1.myworkdayjobs.com/wday/cxs/acme/Acme_Careers/jobs"
+WORKDAY = {"total": 2, "jobPostings": [
+    {"title": "Senior Producer", "externalPath": "/job/Remote/Senior-Producer_R1",
+     "locationsText": "Remote - Spain", "postedOn": "Posted 3 Days Ago"},
+    {"title": "Senior Data Analyst", "externalPath": "/job/X/Data_R2",
+     "locationsText": "2 Locations", "postedOn": "Posted Today"},
+]}
+
+
+class TestNewSources(Base):
+    def setUp(self):
+        super().setUp()
+        config.COMPANIES_FILE.write_text("Fjord Games\nMeseta Games\nLeverCo\n", encoding="utf-8")
+        config.SOURCES_FILE.write_text(json.dumps({
+            "feeds": [], "remote_boards": ["Remotive"],
+            "workday": [{"name": "Acme", "url": "https://acme.wd1.myworkdayjobs.com/en-US/Acme_Careers"}],
+            "boards": [{"name": "Manual Studio", "ats": "greenhouse", "slug": "studiogreenhouse"}],
+        }), encoding="utf-8")
+        self.fake.routes.update({
+            "https://fjordgames.teamtailor.com/jobs.rss": TT_RSS,
+            "https://mesetagames.jobs.personio.de/xml": PERSONIO,
+            "https://remotive.com/api/remote-jobs?search=game": REMOTIVE,
+            "https://remotive.com/api/remote-jobs?search=gaming": {"jobs": []},
+            "https://remotive.com/api/remote-jobs?category=data": {"jobs": []},
+            "https://remotive.com/api/remote-jobs?category=product": {"jobs": []},
+            "https://remotive.com/api/remote-jobs?category=project-management": {"jobs": []},
+            WD_API + "#0": WORKDAY,
+        })
+
+    def test_all_new_sources(self):
+        s = self.run_once()
+        jobs = {(j["title"], j["company"]): (j["verdict"], j["source"]) for j in self.jobs_by_title().values()}
+        self.assertEqual(jobs[("Senior Data Analyst", "Fjord Games")], ("ok", "teamtailor"))
+        self.assertNotIn(("Lead Producer", "Fjord Games"), jobs)                  # hybrid, Oslo
+        self.assertEqual(jobs[("Localization Manager", "Meseta Games")], ("check", "personio"))
+        self.assertEqual(jobs[("Senior Data Analyst", "Pixel Forge")], ("ok", "Remotive"))
+        self.assertEqual(jobs[("Producer", "LeverCo")], ("ok", "Remotive"))       # known company
+        self.assertNotIn(("Senior Data Analyst", "Acme Bank"), jobs)              # not games
+        self.assertNotIn(("Data Analyst Lead", "Lucky Games"), jobs)              # gambling
+        self.assertEqual(jobs[("Senior Producer", "Acme")], ("ok", "workday"))
+        self.assertEqual(jobs[("Senior Data Analyst", "Acme")], ("check", "workday"))
+        self.assertEqual(jobs[("Senior Data Analyst", "Manual Studio")], ("ok", "greenhouse"))  # manual board
+        self.assertEqual(s["boards_failed"], [])
+        db = state.load(config.JOBS_FILE, {})
+        wd = next(r for r in db["jobs"].values() if r["title"] == "Senior Producer")
+        self.assertEqual(wd["url"], "https://acme.wd1.myworkdayjobs.com/en-US/Acme_Careers/job/Remote/Senior-Producer_R1")
+
+    def test_reprobe_old_misses_with_new_systems_only(self):
+        state.save(config.REGISTRY_FILE, {"fjord games": {"name": "Fjord Games", "ats": None, "slug": None}})
+        self.run_once(use_feeds=False, use_remote=False, use_workday=False)
+        reg = state.load(config.REGISTRY_FILE, {})
+        self.assertEqual(reg["fjord games"]["ats"], "teamtailor")
+        self.assertFalse(any("greenhouse.io/v1/boards/fjord" in u for u in self.fake.calls))
+        # a company that misses everywhere is not probed again
+        self.fake.calls.clear()
+        self.run_once(use_feeds=False, use_remote=False, use_workday=False)
+        self.assertFalse(any("leverco" in u and "teamtailor" in u for u in self.fake.calls))
+
+    def test_workday_helpers(self):
+        from pjf import workday
+        self.assertEqual(workday.parse_site("https://epicgames.wd5.myworkdayjobs.com/en-US/Epic_Games"),
+                         ("epicgames.wd5.myworkdayjobs.com", "epicgames", "Epic_Games"))
+        self.assertEqual(workday.posted_date("Posted 30+ Days Ago", dt.date(2026, 9, 30)), "2026-08-31")
+        self.assertEqual(workday.posted_date("Posted Yesterday", dt.date(2026, 9, 30)), "2026-09-29")
 
 
 class TestServer(Base):

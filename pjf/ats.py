@@ -8,7 +8,9 @@ fetched on every run. The registry is plain JSON: fix a wrong slug by hand.
 from __future__ import annotations
 
 import datetime as dt
+import json
 import re
+import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 
 from . import net
@@ -23,7 +25,14 @@ BOARDS = {
     "smartrecruiters": "https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=100",
     "workable": "https://apply.workable.com/api/v1/widget/accounts/{slug}?details=true",
     "recruitee": "https://{slug}.recruitee.com/api/offers/",
+    "teamtailor": "https://{slug}.teamtailor.com/jobs.rss",
+    "personio": "https://{slug}.jobs.personio.de/xml",
+    "lever_eu": "https://api.eu.lever.co/v0/postings/{slug}?mode=json",
 }
+# Systems probed before teamtailor/personio/lever_eu were added. Misses recorded
+# without a "tried" list were probed with these, so they get re-probed with the rest.
+FIRST_ATS = ("greenhouse", "lever", "ashby", "smartrecruiters", "workable", "recruitee")
+XML_ITEM = {"teamtailor": "item", "personio": "position"}   # XML feeds, not JSON
 PROBE_TIMEOUT = 8
 CHECK_VERSION = 2   # bump when name_matches changes: saved boards get re-checked
 FETCH_TIMEOUT = 25
@@ -135,16 +144,86 @@ def _recruitee(company, slug, payload):
                   strip_html((j.get("description") or "") + " " + (j.get("requirements") or "")))
 
 
+def _local(tag) -> str:
+    return tag.rsplit("}", 1)[-1].lower() if isinstance(tag, str) else ""
+
+
+def xml_items(body: bytes, item_tag: str) -> list[dict]:
+    """Flatten each <item_tag> element: direct children become keys (lowercase,
+    no namespace); a child with sub-elements gets all its text joined."""
+    root = ET.fromstring(body)
+    out = []
+    for node in root.iter():
+        if _local(node.tag) != item_tag:
+            continue
+        d = {}
+        for child in node:
+            name = _local(child.tag)
+            text = " ".join(t.strip() for t in child.itertext() if t.strip())
+            if text:
+                d[name] = f"{d[name]} | {text}" if name in d else text
+        out.append(d)
+    return out
+
+
+def _teamtailor(company, slug, payload):
+    for j in payload:
+        loc = j.get("locations") or j.get("location") or ""
+        status = (j.get("remotestatus") or j.get("remote_status") or "").lower()
+        remote = None
+        if status in ("fully", "remote", "full"):
+            remote = True
+        elif status == "hybrid":
+            loc = f"{loc} / hybrid" if loc else "hybrid"
+        elif status in ("none", "onsite", "on-site"):
+            remote = False
+        posted = parse_date(j.get("pubdate"))
+        yield Job("teamtailor", f"teamtailor:{slug}", j.get("title", ""), company,
+                  j.get("link", ""), posted.isoformat() if posted else "", loc, remote,
+                  strip_html(j.get("description", "")))
+
+
+def _personio(company, slug, payload):
+    for j in payload:
+        loc = " / ".join(filter(None, [j.get("office"), j.get("additionaloffices")]))
+        yield Job("personio", f"personio:{slug}", j.get("name", ""), company,
+                  f"https://{slug}.jobs.personio.de/job/{j.get('id', '')}",
+                  str(j.get("createdat", ""))[:10], loc, None,
+                  strip_html(j.get("jobdescriptions", "")))
+
+
+def _lever_eu(company, slug, payload):
+    for job in _lever(company, slug, payload):
+        job.source, job.board = "lever", f"lever_eu:{slug}"
+        yield job
+
+
 PARSERS = {"greenhouse": _greenhouse, "lever": _lever, "ashby": _ashby,
            "smartrecruiters": _smartrecruiters, "workable": _workable,
-           "recruitee": _recruitee}
+           "recruitee": _recruitee, "teamtailor": _teamtailor,
+           "personio": _personio, "lever_eu": _lever_eu}
+
+
+def load(ats, slug, timeout):
+    """Fetch a board. Returns the payload (JSON, or a list of dicts for XML
+    feeds) or None when the board does not answer or is not a board."""
+    url = BOARDS[ats].format(slug=slug)
+    if ats in XML_ITEM:
+        status, body = net.get(url, timeout, "application/rss+xml, application/xml, */*;q=0.5")
+        if status != 200:
+            return None
+        try:
+            return xml_items(body, XML_ITEM[ats])
+        except ET.ParseError:   # an HTML page instead of a feed
+            return None
+    return net.get_json(url, timeout=timeout)[1]
 
 
 def _has_jobs(ats, payload) -> bool:
     if payload is None:
         return False
-    if ats == "lever":
-        return isinstance(payload, list) and bool(payload)
+    if isinstance(payload, list):   # lever, lever_eu, teamtailor, personio
+        return bool(payload)
     if not isinstance(payload, dict):
         return False
     return bool(payload.get({"recruitee": "offers", "smartrecruiters": "content"}.get(ats, "jobs")))
@@ -154,7 +233,6 @@ def name_matches(name: str, payload) -> bool:
     """True if the company name shows up in the board data (descriptions, URLs,
     company fields). Guards against a short slug hitting a different company,
     e.g. "neon" for Neon Giant landing on a bank's board."""
-    import json
     blob = _slug(json.dumps(payload, ensure_ascii=False)[:3_000_000])
     full = _slug(name)
     core = _slug(GENERIC_SUFFIX.sub("", name))
@@ -170,7 +248,7 @@ def fetch_board(entry):
     that fails the check is turned back into a miss (ats/slug set to None)."""
     ats, slug = entry["ats"], entry["slug"]
     board = f"{ats}:{slug}"
-    _, payload = net.get_json(BOARDS[ats].format(slug=slug), timeout=FETCH_TIMEOUT)
+    payload = load(ats, slug, FETCH_TIMEOUT)
     if payload is None:
         return entry, board, False, []
     if entry.get("verified") != CHECK_VERSION:
@@ -184,12 +262,15 @@ def fetch_board(entry):
         return entry, board, False, []
 
 
-def probe(name):
-    """Look for a company's board. Returns (registry_entry, jobs)."""
-    entry = {"name": name, "ats": None, "slug": None, "checked": dt.date.today().isoformat()}
+def probe(name, systems=None):
+    """Look for a company's board on the given systems (default: all).
+    Returns (registry_entry, jobs)."""
+    systems = list(systems or BOARDS)
+    entry = {"name": name, "ats": None, "slug": None, "tried": systems,
+             "checked": dt.date.today().isoformat()}
     for slug in slug_variants(name):
-        for ats, pattern in BOARDS.items():
-            _, payload = net.get_json(pattern.format(slug=slug), timeout=PROBE_TIMEOUT)
+        for ats in systems:
+            payload = load(ats, slug, PROBE_TIMEOUT)
             if _has_jobs(ats, payload) and name_matches(name, payload):
                 entry.update(ats=ats, slug=slug, verified=CHECK_VERSION)
                 try:
@@ -199,13 +280,36 @@ def probe(name):
     return entry, []
 
 
-def collect(registry: dict, companies: list[str], probe_limit: int, log=print):
-    """Fetch known boards, probe up to probe_limit new companies.
+def to_probe(registry: dict, companies: list[str]) -> list[tuple]:
+    """(name, systems) pairs still to probe: new companies get every system,
+    earlier misses only the systems they were not tried on yet."""
+    out = []
+    for name in companies:
+        entry = registry.get(norm(name))
+        if entry is None:
+            out.append((name, list(BOARDS)))
+        elif not entry.get("ats"):
+            tried = set(entry.get("tried") or FIRST_ATS)
+            if entry.get("rejected"):
+                tried.discard(entry["rejected"].split(":", 1)[0])  # may exist under another slug
+            missing = [a for a in BOARDS if a not in tried]
+            if missing:
+                out.append((name, missing))
+    return out
 
-    Mutates registry. Returns (jobs, board_status) where board_status maps
-    board id -> True/False (fetched OK or not).
+
+def collect(registry: dict, companies: list[str], probe_limit: int, log=print, manual=()):
+    """Fetch known boards, probe up to probe_limit companies.
+
+    manual: boards set by hand in config/sources.json ({"name", "ats", "slug"});
+    they override the registry. Mutates registry. Returns (jobs, board_status)
+    where board_status maps board id -> True/False (fetched OK or not).
     """
     jobs, status = [], {}
+    for m in manual:
+        if m.get("ats") in BOARDS and m.get("slug"):
+            registry[norm(m["name"])] = {"name": m["name"], "ats": m["ats"], "slug": m["slug"],
+                                         "verified": CHECK_VERSION, "manual": True}
 
     known = [e for e in registry.values() if e.get("ats")]
     if known:
@@ -216,11 +320,17 @@ def collect(registry: dict, companies: list[str], probe_limit: int, log=print):
                 if entry.get("rejected") == board and not entry.get("ats"):
                     log(f"  dropped board: {entry['name']} -> {board} (name not found in its data)")
 
-    todo = [c for c in companies if norm(c) not in registry][:max(0, probe_limit)]
+    todo = to_probe(registry, companies)[:max(0, probe_limit)]
     discovered = 0
     if todo:
         with ThreadPoolExecutor(max_workers=WORKERS) as pool:
-            for entry, found in pool.map(probe, todo):
+            for entry, found in pool.map(lambda t: probe(*t), todo):
+                old = registry.get(norm(entry["name"])) or {}
+                if not entry["ats"]:
+                    entry["tried"] = sorted(set(entry["tried"]) | set(old.get("tried") or
+                                                                    (FIRST_ATS if old else ())))
+                    if old.get("rejected"):
+                        entry["rejected"] = old["rejected"]
                 registry[norm(entry["name"])] = entry
                 if entry["ats"]:
                     discovered += 1
@@ -229,7 +339,7 @@ def collect(registry: dict, companies: list[str], probe_limit: int, log=print):
                     log(f"  found board: {entry['name']} -> {entry['ats']}/{entry['slug']}")
 
     failed = sum(1 for ok in status.values() if not ok)
-    left = sum(1 for c in companies if norm(c) not in registry)
+    left = len(to_probe(registry, companies))
     log(f"[ats] {len(known)} known boards ({failed} failed), probed {len(todo)} companies, "
         f"{discovered} new boards, {left} companies left to probe, {len(jobs)} postings")
     return jobs, status
