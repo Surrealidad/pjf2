@@ -16,7 +16,7 @@ EU_WIDE = re.compile(
     r"utc\s*[+-]?\s*[0-3])\b", re.I)
 
 # Case-sensitive so the English word "us" never reads as the United States.
-BARE_CODES = re.compile(r"\b(US|U\.S\.|USA|UK|U\.K\.|UAE|NZ|CA)\b")
+BARE_CODES = re.compile(r"\b(?:US|USA|UK|UAE|NZ|CA)\b|\bU\.S\.(?:A\.?)?|\bU\.K\.")
 
 SPAIN = re.compile(r"\b(spain|espa[nñ]a|iberia|galicia|coru[nñ]a|madrid|"
                    r"barcelona|valencia|sevilla|seville|bilbao|m[aá]laga)\b", re.I)

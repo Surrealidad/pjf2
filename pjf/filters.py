@@ -61,7 +61,9 @@ def classify(job: Job, today: dt.date) -> str:
               or bool(REMOTE_WORD.search(job.title)))
     if job.remote is False and not strong:
         return "onsite"
-    if not strong and loc.ONSITE.search(place_text):
+    # An explicit hybrid/on-site location wins over a source's remote flag
+    # (some boards flag hybrid jobs as remote), unless the location also says remote.
+    if loc.ONSITE.search(place_text) and not REMOTE_WORD.search(place_text):
         return "onsite"
 
     place = loc.classify_place(place_text)

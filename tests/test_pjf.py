@@ -231,6 +231,10 @@ class TestPieces(Base):
         self.assertEqual(verdict("Madrid", remote=True), "ok")
         self.assertEqual(verdict("Madrid"), "not remote")
         self.assertEqual(verdict("Hybrid - Barcelona"), "onsite")
+        self.assertEqual(verdict("Paris / hybrid", remote=True), "onsite")
+        self.assertEqual(verdict("Remote or Hybrid - Madrid"), "ok")
+        self.assertEqual(verdict("San Francisco Bay Area or Remote (U.S.)"), "location")
+        self.assertEqual(verdict("Remote - U.K."), "location")
         self.assertEqual(verdict("", desc="We are a remote-first studio."), "check")
         self.assertEqual(verdict("Remote", desc="Candidates must be located in Canada."), "location")
 
