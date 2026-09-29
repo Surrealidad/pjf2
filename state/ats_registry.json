@@ -67,6 +67,13 @@
   "name": "Appeal Studios",
   "slug": null
  },
+ "applovin": {
+  "ats": "greenhouse",
+  "checked": "2026-09-29",
+  "name": "AppLovin",
+  "slug": "applovin",
+  "verified": 2
+ },
  "arkane studios": {
   "ats": null,
   "checked": "2026-09-29",
@@ -96,6 +103,13 @@
   "checked": "2026-09-23",
   "name": "Avalanche Studios",
   "slug": "avalanchestudios",
+  "verified": 2
+ },
+ "bandai namco": {
+  "ats": "greenhouse",
+  "checked": "2026-09-29",
+  "name": "Bandai Namco",
+  "slug": "bandainamco",
   "verified": 2
  },
  "beat games": {
@@ -196,10 +210,22 @@
   "name": "Bytro Labs",
   "slug": null
  },
+ "capcom": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Capcom",
+  "slug": null
+ },
  "cd projekt": {
   "ats": null,
   "checked": "2026-09-23",
   "name": "CD Projekt",
+  "slug": null
+ },
+ "certain affinity": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Certain Affinity",
   "slug": null
  },
  "chimera entertainment": {
@@ -344,6 +370,12 @@
   "slug": "dontnod",
   "verified": 2
  },
+ "double fine": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Double Fine",
+  "slug": null
+ },
  "dovetail games": {
   "ats": "recruitee",
   "checked": "2026-09-23",
@@ -355,6 +387,19 @@
   "ats": null,
   "checked": "2026-09-23",
   "name": "Draw Distance",
+  "slug": null
+ },
+ "dream games": {
+  "ats": "greenhouse",
+  "checked": "2026-09-29",
+  "name": "Dream Games",
+  "slug": "dreamgames",
+  "verified": 2
+ },
+ "dreamhaven": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Dreamhaven",
   "slug": null
  },
  "electric square": {
@@ -468,6 +513,12 @@
   "name": "Frontier Developments",
   "slug": null
  },
+ "frost giant studios": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Frost Giant Studios",
+  "slug": null
+ },
  "frozenbyte": {
   "ats": null,
   "checked": "2026-09-23",
@@ -486,6 +537,12 @@
   "name": "Funcom",
   "slug": null
  },
+ "funplus": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "FunPlus",
+  "slug": null
+ },
  "futureplay": {
   "ats": null,
   "checked": "2026-09-23",
@@ -499,11 +556,24 @@
   "slug": "gameloft",
   "verified": 2
  },
+ "garena": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Garena",
+  "slug": null
+ },
  "gato studio": {
   "ats": null,
   "checked": "2026-09-23",
   "name": "Gato Studio",
   "slug": null
+ },
+ "gearbox software": {
+  "ats": "greenhouse",
+  "checked": "2026-09-29",
+  "name": "Gearbox Software",
+  "slug": "gearbox",
+  "verified": 2
  },
  "genera games": {
   "ats": "ashby",
@@ -535,6 +605,12 @@
   "ats": null,
   "checked": "2026-09-23",
   "name": "Guerrilla Games",
+  "slug": null
+ },
+ "habby": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Habby",
   "slug": null
  },
  "haemimont games": {
@@ -572,6 +648,13 @@
   "checked": "2026-09-23",
   "name": "Housemarque",
   "slug": "housemarque",
+  "verified": 2
+ },
+ "hoyoverse": {
+  "ats": "ashby",
+  "checked": "2026-09-29",
+  "name": "HoYoverse",
+  "slug": "hoyoverse",
   "verified": 2
  },
  "hutch games": {
@@ -624,6 +707,13 @@
   "name": "Jagex",
   "slug": null
  },
+ "jam city": {
+  "ats": "lever",
+  "checked": "2026-09-29",
+  "name": "Jam City",
+  "slug": "jamcity",
+  "verified": 2
+ },
  "jyamma games": {
   "ats": null,
   "checked": "2026-09-29",
@@ -643,6 +733,13 @@
   "rejected": "greenhouse:keen",
   "slug": null,
   "verified": true
+ },
+ "keywords studios": {
+  "ats": "smartrecruiters",
+  "checked": "2026-09-29",
+  "name": "Keywords Studios",
+  "slug": "keywordsstudios",
+  "verified": 2
  },
  "king": {
   "ats": null,
@@ -673,6 +770,13 @@
   "checked": "2026-09-23",
   "name": "Kolibri Games",
   "slug": "kolibrigames",
+  "verified": 2
+ },
+ "krafton": {
+  "ats": "greenhouse",
+  "checked": "2026-09-29",
+  "name": "Krafton",
+  "slug": "krafton",
   "verified": 2
  },
  "kunos simulazioni": {
@@ -712,6 +816,12 @@
   "checked": "2026-09-23",
   "name": "Liquid Swords",
   "rejected": "ashby:liquid",
+  "slug": null
+ },
+ "localsoft": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Localsoft",
   "slug": null
  },
  "machinegames": {
@@ -793,6 +903,13 @@
   "name": "Mojang",
   "slug": null
  },
+ "moon active": {
+  "ats": "ashby",
+  "checked": "2026-09-29",
+  "name": "Moon Active",
+  "slug": "moonactive",
+  "verified": 2
+ },
  "motion twin": {
   "ats": null,
   "checked": "2026-09-29",
@@ -828,6 +945,18 @@
   "ats": null,
   "checked": "2026-09-23",
   "name": "Nerd Monkeys",
+  "slug": null
+ },
+ "netmarble": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Netmarble",
+  "slug": null
+ },
+ "nexon": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Nexon",
   "slug": null
  },
  "niantic": {
@@ -872,6 +1001,12 @@
   "ats": null,
   "checked": "2026-09-23",
   "name": "Novarama",
+  "slug": null
+ },
+ "obsidian entertainment": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Obsidian Entertainment",
   "slug": null
  },
  "omnidrone": {
@@ -956,10 +1091,40 @@
   "slug": "playground",
   "verified": 2
  },
+ "playrix": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Playrix",
+  "slug": null
+ },
+ "playtika": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Playtika",
+  "slug": null
+ },
  "plug in digital": {
   "ats": null,
   "checked": "2026-09-29",
   "name": "Plug In Digital",
+  "slug": null
+ },
+ "pocket gems": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Pocket Gems",
+  "slug": null
+ },
+ "probably monsters": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Probably Monsters",
+  "slug": null
+ },
+ "ptw": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "PTW",
   "slug": null
  },
  "purple lamp studios": {
@@ -1057,6 +1222,12 @@
   "name": "Roll7",
   "slug": null
  },
+ "rollic games": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Rollic Games",
+  "slug": null
+ },
  "romero games": {
   "ats": null,
   "checked": "2026-09-23",
@@ -1093,10 +1264,30 @@
   "name": "Schell Games",
   "slug": null
  },
+ "scopely": {
+  "ats": "greenhouse",
+  "checked": "2026-09-29",
+  "name": "Scopely",
+  "slug": "scopely",
+  "verified": 2
+ },
  "scs software": {
   "ats": null,
   "checked": "2026-09-23",
   "name": "SCS Software",
+  "slug": null
+ },
+ "second dinner": {
+  "ats": "ashby",
+  "checked": "2026-09-29",
+  "name": "Second Dinner",
+  "slug": "seconddinner",
+  "verified": 2
+ },
+ "sega": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Sega",
   "slug": null
  },
  "sharkmob": {
@@ -1109,6 +1300,24 @@
   "ats": null,
   "checked": "2026-09-29",
   "name": "Shiro Games",
+  "slug": null
+ },
+ "side": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Side",
+  "slug": null
+ },
+ "singularity 6": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Singularity 6",
+  "slug": null
+ },
+ "skillz": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Skillz",
   "slug": null
  },
  "sloclap": {
@@ -1170,6 +1379,13 @@
   "checked": "2026-09-23",
   "name": "Sports Interactive",
   "slug": null
+ },
+ "square enix": {
+  "ats": "workable",
+  "checked": "2026-09-29",
+  "name": "Square Enix",
+  "slug": "square-enix",
+  "verified": 2
  },
  "star stable entertainment": {
   "ats": null,
@@ -1276,6 +1492,20 @@
   "name": "Tequila Works",
   "slug": null
  },
+ "terra localizations": {
+  "ats": "ashby",
+  "checked": "2026-09-29",
+  "name": "Terra Localizations",
+  "slug": "terra",
+  "verified": 2
+ },
+ "testronic": {
+  "ats": "workable",
+  "checked": "2026-09-29",
+  "name": "Testronic",
+  "slug": "testronic",
+  "verified": 2
+ },
  "the farm 51": {
   "ats": null,
   "checked": "2026-09-23",
@@ -1293,6 +1523,13 @@
   "checked": "2026-09-23",
   "name": "The Outsiders",
   "slug": null
+ },
+ "theorycraft games": {
+  "ats": "lever",
+  "checked": "2026-09-29",
+  "name": "Theorycraft Games",
+  "slug": "theorycraftgames",
+  "verified": 2
  },
  "thq nordic": {
   "ats": null,
@@ -1329,6 +1566,13 @@
   "checked": "2026-09-23",
   "name": "Triband",
   "slug": null
+ },
+ "tripledot studios": {
+  "ats": "greenhouse",
+  "checked": "2026-09-29",
+  "name": "Tripledot Studios",
+  "slug": "tripledotstudios",
+  "verified": 2
  },
  "triumph studios": {
   "ats": null,
@@ -1371,6 +1615,13 @@
   "checked": "2026-09-29",
   "name": "Valve",
   "slug": null
+ },
+ "velan studios": {
+  "ats": "workable",
+  "checked": "2026-09-29",
+  "name": "Velan Studios",
+  "slug": "velanstudios",
+  "verified": 2
  },
  "vertigo games": {
   "ats": "workable",
@@ -1423,6 +1674,12 @@
   "ats": null,
   "checked": "2026-09-23",
   "name": "Zen Studios",
+  "slug": null
+ },
+ "zynga": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Zynga",
   "slug": null
  }
 }

@@ -1,18 +1,18 @@
 {
  "active": 22,
  "boards_failed": [],
- "boards_ok": 41,
+ "boards_ok": 58,
  "dropped": {
-  "location": 134,
-  "not remote": 42,
-  "old": 25,
-  "onsite": 7,
-  "role": 1152,
-  "seniority": 12
+  "location": 178,
+  "not remote": 106,
+  "old": 37,
+  "onsite": 23,
+  "role": 1526,
+  "seniority": 14
  },
  "kept": 22,
- "new": 13,
- "postings": 1394,
- "run": "2026-09-29T11:37:06Z",
- "seconds": 26
+ "new": 11,
+ "postings": 1906,
+ "run": "2026-09-29T11:43:53Z",
+ "seconds": 21
 }
