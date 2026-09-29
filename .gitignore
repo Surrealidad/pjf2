@@ -1,0 +1,9 @@
+# Pablo's marks stay on the PC (the repo is public)
+marks.json
+__pycache__/
+*.pyc
+*.tmp
+probe_results.md
+
+# Working notes, kept private
+PJF_v2_handoff.md

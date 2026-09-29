@@ -1,0 +1,25 @@
+{
+ "feeds": [
+  {"name": "Remote Game Jobs", "url": "https://remotegamejobs.com/feed.rss", "remote": true,
+   "note": "all listings are remote"},
+  {"name": "GameJobs.co", "url": "https://gamejobs.co/?format=atom"},
+  {"name": "Work With Indies", "url": "https://workwithindies.com/careers/rss.xml",
+   "note": "URL from v1, not re-probed"},
+  {"name": "Games-Career", "url": "https://www.games-career.com/rss/Joboffer",
+   "note": "URL from v1, not re-probed, mostly on-site DE jobs"}
+ ],
+ "quick_links": [
+  {"name": "Hitmarker", "url": "https://hitmarker.net/jobs", "note": "no bots allowed"},
+  {"name": "ArtStation Jobs", "url": "https://www.artstation.com/jobs"},
+  {"name": "GamesIndustry.biz Jobs", "url": "https://jobs.gamesindustry.biz/"},
+  {"name": "Games Jobs Direct", "url": "https://www.gamesjobsdirect.com/"},
+  {"name": "XP Game Jobs", "url": "https://xpgamejobs.com/"},
+  {"name": "r/gameDevClassifieds", "url": "https://www.reddit.com/r/gameDevClassifieds/new/"},
+  {"name": "r/gameDevJobs", "url": "https://www.reddit.com/r/gameDevJobs/new/"},
+  {"name": "Amir Satvat", "url": "https://amirsatvat.com/", "note": "company lists"},
+  {"name": "LinkedIn: games data, remote, Spain",
+   "url": "https://www.linkedin.com/jobs/search/?keywords=video%20games%20data%20analyst&location=Spain&f_WT=2"},
+  {"name": "LinkedIn: games producer, remote, Spain",
+   "url": "https://www.linkedin.com/jobs/search/?keywords=video%20games%20producer&location=Spain&f_WT=2"}
+ ]
+}

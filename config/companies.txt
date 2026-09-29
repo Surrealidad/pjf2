@@ -1,0 +1,317 @@
+# Game companies to look up on public ATS job boards, one name per line.
+# PJF guesses slugs, probes Greenhouse, Lever, Ashby, SmartRecruiters, Workable
+# and Recruitee, and caches the result in state/ats_registry.json (once per company).
+# Ported from v1 (game sections only). Add or remove freely.
+
+# ============ GAME STUDIOS & PUBLISHERS ============
+
+# --- Spain / Portugal ---
+MercurySteam
+Tequila Works
+Novarama
+Digital Legends
+Socialpoint
+Omnidrone
+Genera Games
+The Game Kitchen
+Nomada Studio
+Deconstructeam
+Fictiorama Studios
+Beautifun Games
+Delirium Studios
+Pendulo Studios
+Undercoders
+Gato Studio
+Elite3D
+Miniclip
+Fun Punch Games
+Nerd Monkeys
+Bica Studios
+
+# --- Nordics ---
+Rovio
+Supercell
+Remedy Entertainment
+Housemarque
+Metacore
+Small Giant Games
+Fingersoft
+Redhill Games
+Nitro Games
+Frozenbyte
+Colossal Order
+Bugbear Entertainment
+Mainframe Industries
+Futureplay
+Traplight
+King
+DICE
+Massive Entertainment
+Avalanche Studios
+Fatshark
+Coffee Stain Studios
+Sharkmob
+MachineGames
+Mojang
+Paradox Interactive
+Embracer Group
+Star Stable Entertainment
+Toca Boca
+Resolution Games
+Thunderful
+Neon Giant
+Stunlock Studios
+The Outsiders
+Raw Fury
+Landfall Games
+Iron Gate Studio
+Fast Travel Games
+Snowprint Studios
+Liquid Swords
+Funcom
+Dirtybit
+Megapop
+IO Interactive
+Sybo Games
+Tactile Games
+Ghost Ship Games
+Triband
+Playdead
+
+# --- Netherlands / Belgium ---
+Guerrilla Games
+Nixxes Software
+Vertigo Games
+Triumph Studios
+Abbey Games
+Ronimo Games
+Force Field
+Paladin Studios
+Larian Studios
+Fishing Cactus
+Happy Volcano
+Appeal Studios
+
+# --- Germany / Austria / Switzerland ---
+Crytek
+Yager
+Deck13 Interactive
+InnoGames
+Goodgame Studios
+Wooga
+Kolibri Games
+Travian Games
+Flaregames
+Bytro Labs
+Daedalic Entertainment
+THQ Nordic
+HandyGames
+Mimimi Games
+Black Forest Games
+Keen Games
+KING Art Games
+Limbic Entertainment
+Sandbox Interactive
+Kalypso Media
+Aesir Interactive
+Chimera Entertainment
+Klang Games
+Rockfish Games
+Studio Fizbin
+Bongfish
+Mi'pu'mi Games
+Purple Lamp Studios
+Blindflug Studios
+Stray Fawn Studio
+
+# --- Poland / Czechia / Central Europe ---
+CD Projekt
+Techland
+People Can Fly
+11 bit studios
+Bloober Team
+Flying Wild Hog
+The Farm 51
+Creepy Jar
+Ten Square Games
+Huuuge Games
+Vivid Games
+One More Level
+Anshar Studios
+Superhot
+Fools Theory
+Starward Industries
+Draw Distance
+Artifex Mundi
+CI Games
+QLOC
+Bohemia Interactive
+Warhorse Studios
+Amanita Design
+SCS Software
+Madfinger Games
+Beat Games
+NeocoreGames
+Zen Studios
+Digic Pictures
+Haemimont Games
+Snapshot Games
+Nordcurrent
+Room 8 Group
+Sperasoft
+GSC Game World
+Frogwares
+Plarium
+
+# --- UK / Ireland ---
+Rockstar Games
+Rocksteady Studios
+Creative Assembly
+Codemasters
+Sumo Digital
+Jagex
+Frontier Developments
+Splash Damage
+Media Molecule
+Sports Interactive
+Playground Games
+Ninja Theory
+Rare
+TT Games
+Fireproof Games
+Bossa Studios
+nDreams
+Supermassive Games
+Dovetail Games
+Team17
+Curve Games
+Coatsink
+Roll7
+Auroch Digital
+Wushu Studios
+Firesprite
+Studio Gobo
+Electric Square
+Space Ape Games
+Kwalee
+Hutch Games
+Outplay Entertainment
+4J Studios
+Blazing Griffin
+Romero Games
+Black Shamrock
+Digit Game Studios
+Havok
+Improbable
+
+# --- France / Italy ---
+Ubisoft
+Gameloft
+Dont Nod
+Quantic Dream
+Asobo Studio
+Amplitude Studios
+Arkane Studios
+Cyanide Studio
+Spiders
+Focus Entertainment
+Nacon
+Voodoo
+Homa Games
+Ankama
+Motion Twin
+Shiro Games
+Sloclap
+Passtech Games
+Plug In Digital
+Milestone
+Kunos Simulazioni
+34BigThings
+Storm in a Teacup
+Jyamma Games
+505 Games
+Untold Games
+
+# --- Global / North America (remote-friendly) ---
+Epic Games
+Riot Games
+Valve
+Unity
+Discord
+Roblox
+Niantic
+Bungie
+Digital Extremes
+Behaviour Interactive
+Klei Entertainment
+Blackbird Interactive
+Relic Entertainment
+Iron Galaxy Studios
+Panic Button
+Owlchemy Labs
+Schell Games
+Velan Studios
+Frost Giant Studios
+Second Dinner
+Dreamhaven
+Singularity 6
+Theorycraft Games
+Probably Monsters
+Obsidian Entertainment
+Double Fine
+Gearbox Software
+Certain Affinity
+Scopely
+Zynga
+Jam City
+Pocket Gems
+Skillz
+Tripledot Studios
+Playrix
+Dream Games
+Moon Active
+Playtika
+Rollic Games
+AppLovin
+FunPlus
+Habby
+Krafton
+HoYoverse
+Garena
+Netmarble
+Nexon
+Bandai Namco
+Square Enix
+Sega
+Capcom
+
+# ============ GAME SERVICES / LOCALIZATION ============
+Keywords Studios
+PTW
+Side
+Testronic
+Localsoft
+Terra Localizations
+Altagram
+Universally Speaking
+Virtuos
+Streamline Media Group
+Magic Media
+Amber Studio
+Starloop Studios
+Kevuru Games
+Lionbridge
+RWS Group
+Welocalize
+TransPerfect
+Acclaro
+Andovar
+Lilt
+Smartling
+Phrase
+XTM International
+Crowdin
+Transifex
+Localazy
+LocalizeDirect
+

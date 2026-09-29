@@ -1,0 +1,18 @@
+{
+ "active": 10,
+ "boards_failed": [],
+ "boards_ok": 33,
+ "dropped": {
+  "location": 24,
+  "not remote": 23,
+  "old": 19,
+  "onsite": 5,
+  "role": 498,
+  "seniority": 4
+ },
+ "kept": 10,
+ "new": 1,
+ "postings": 583,
+ "run": "2026-09-23T14:26:13Z",
+ "seconds": 39
+}
