@@ -30,10 +30,23 @@
   "name": "Abbey Games",
   "slug": null
  },
+ "acclaro": {
+  "ats": "workable",
+  "checked": "2026-09-29",
+  "name": "Acclaro",
+  "slug": "acclaro",
+  "verified": 2
+ },
  "aesir interactive": {
   "ats": null,
   "checked": "2026-09-23",
   "name": "Aesir Interactive",
+  "slug": null
+ },
+ "altagram": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Altagram",
   "slug": null
  },
  "amanita design": {
@@ -42,12 +55,24 @@
   "name": "Amanita Design",
   "slug": null
  },
+ "amber studio": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Amber Studio",
+  "slug": null
+ },
  "amplitude studios": {
   "ats": "ashby",
   "checked": "2026-09-29",
   "name": "Amplitude Studios",
   "slug": "amplitude",
   "verified": 2
+ },
+ "andovar": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Andovar",
+  "slug": null
  },
  "ankama": {
   "ats": null,
@@ -274,6 +299,12 @@
   "ats": null,
   "checked": "2026-09-23",
   "name": "Creepy Jar",
+  "slug": null
+ },
+ "crowdin": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Crowdin",
   "slug": null
  },
  "crytek": {
@@ -734,6 +765,12 @@
   "slug": null,
   "verified": true
  },
+ "kevuru games": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Kevuru Games",
+  "slug": null
+ },
  "keywords studios": {
   "ats": "smartrecruiters",
   "checked": "2026-09-29",
@@ -804,6 +841,12 @@
   "slug": "larian",
   "verified": 2
  },
+ "lilt": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Lilt",
+  "slug": null
+ },
  "limbic entertainment": {
   "ats": "ashby",
   "checked": "2026-09-23",
@@ -811,11 +854,29 @@
   "slug": "limbic",
   "verified": 2
  },
+ "lionbridge": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Lionbridge",
+  "slug": null
+ },
  "liquid swords": {
   "ats": null,
   "checked": "2026-09-23",
   "name": "Liquid Swords",
   "rejected": "ashby:liquid",
+  "slug": null
+ },
+ "localazy": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Localazy",
+  "slug": null
+ },
+ "localizedirect": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "LocalizeDirect",
   "slug": null
  },
  "localsoft": {
@@ -835,6 +896,13 @@
   "checked": "2026-09-23",
   "name": "Madfinger Games",
   "slug": null
+ },
+ "magic media": {
+  "ats": "workable",
+  "checked": "2026-09-29",
+  "name": "Magic Media",
+  "slug": "magic-media",
+  "verified": 2
  },
  "mainframe industries": {
   "ats": null,
@@ -1072,6 +1140,13 @@
   "slug": "peoplecanfly",
   "verified": 2
  },
+ "phrase": {
+  "ats": "ashby",
+  "checked": "2026-09-29",
+  "name": "Phrase",
+  "slug": "phrase",
+  "verified": 2
+ },
  "plarium": {
   "ats": null,
   "checked": "2026-09-23",
@@ -1252,6 +1327,13 @@
   "name": "Rovio",
   "slug": null
  },
+ "rws group": {
+  "ats": "lever",
+  "checked": "2026-09-29",
+  "name": "RWS Group",
+  "slug": "rws",
+  "verified": 2
+ },
  "sandbox interactive": {
   "ats": null,
   "checked": "2026-09-23",
@@ -1332,6 +1414,13 @@
   "name": "Small Giant Games",
   "slug": null
  },
+ "smartling": {
+  "ats": "greenhouse",
+  "checked": "2026-09-29",
+  "name": "Smartling",
+  "slug": "smartling",
+  "verified": 2
+ },
  "snapshot games": {
   "ats": null,
   "checked": "2026-09-23",
@@ -1393,6 +1482,12 @@
   "name": "Star Stable Entertainment",
   "slug": null
  },
+ "starloop studios": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Starloop Studios",
+  "slug": null
+ },
  "starward industries": {
   "ats": null,
   "checked": "2026-09-23",
@@ -1409,6 +1504,12 @@
   "ats": null,
   "checked": "2026-09-23",
   "name": "Stray Fawn Studio",
+  "slug": null
+ },
+ "streamline media group": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Streamline Media Group",
   "slug": null
  },
  "studio fizbin": {
@@ -1549,6 +1650,19 @@
   "name": "Toca Boca",
   "slug": null
  },
+ "transifex": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Transifex",
+  "slug": null
+ },
+ "transperfect": {
+  "ats": "smartrecruiters",
+  "checked": "2026-09-29",
+  "name": "TransPerfect",
+  "slug": "transperfect",
+  "verified": 2
+ },
  "traplight": {
   "ats": null,
   "checked": "2026-09-23",
@@ -1604,6 +1718,13 @@
   "name": "Unity",
   "slug": null
  },
+ "universally speaking": {
+  "ats": "workable",
+  "checked": "2026-09-29",
+  "name": "Universally Speaking",
+  "slug": "universally-speaking",
+  "verified": 2
+ },
  "untold games": {
   "ats": null,
   "checked": "2026-09-29",
@@ -1630,6 +1751,12 @@
   "slug": "vertigogames",
   "verified": 2
  },
+ "virtuos": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Virtuos",
+  "slug": null
+ },
  "vivid games": {
   "ats": null,
   "checked": "2026-09-23",
@@ -1651,6 +1778,12 @@
   "name": "Warhorse Studios",
   "slug": null
  },
+ "welocalize": {
+  "ats": null,
+  "checked": "2026-09-29",
+  "name": "Welocalize",
+  "slug": null
+ },
  "wooga": {
   "ats": "greenhouse",
   "checked": "2026-09-23",
@@ -1663,6 +1796,13 @@
   "checked": "2026-09-23",
   "name": "Wushu Studios",
   "slug": null
+ },
+ "xtm international": {
+  "ats": "workable",
+  "checked": "2026-09-29",
+  "name": "XTM International",
+  "slug": "xtm",
+  "verified": 2
  },
  "yager": {
   "ats": null,
