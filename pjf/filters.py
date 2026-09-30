@@ -31,6 +31,13 @@ SENIORITY = re.compile(
     r"\b(intern(ship)?|junior|jr\.?|graduate|grad|trainee|apprentice(ship)?|entry[- ]level|"
     r"working student|werkstudent|praktikum|placement|becario|pr[aá]cticas)\b", re.I)
 
+# Freelance and linguist work (translators, transcribers, testers, talent pools):
+# not the kind of role PJF looks for. "Translation Manager" is kept.
+NOT_A_ROLE = re.compile(
+    r"\b(freelance|freelancers?|translators?|transcreat\w*|transcri(?:ption|bers?)|"
+    r"locali[sz]ers|linguists?|testers?|lqa testing|evaluat(?:ion|ors?)|talent pool|"
+    r"general application)\b", re.I)
+
 REMOTE_WORD = re.compile(
     r"\b(remote|remotely|anywhere|worldwide|work from home|wfh|home[- ]based|distributed|"
     r"telecommut\w*|teletrabajo|remoto)\b", re.I)
@@ -52,6 +59,8 @@ def classify(job: Job, today: dt.date) -> str:
         return "role"
     if SENIORITY.search(job.title):
         return "seniority"
+    if NOT_A_ROLE.search(job.title):
+        return "role"
     posted = parse_date(job.posted)
     if posted and (today - posted).days > MAX_AGE_DAYS:
         return "old"

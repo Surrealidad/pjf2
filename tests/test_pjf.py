@@ -213,6 +213,15 @@ class TestPieces(Base):
         self.assertTrue(name_matches("Larian Studios", {"d": "At Larian we make RPGs"}))
         self.assertTrue(name_matches("Wooga", {"u": "https://wooga.com"}))
 
+    def test_not_a_role(self):
+        for title in ("Freelance Legal Translator | English to Galician", "Audio Transcription - Thai",
+                      "Video Game LQA Testing", "Join Our Healthcare Linguist Talent Pool",
+                      "Senior Farsi Linguistic QA Tester (Remote)"):
+            j = Job("x", "x", title, "Co", "u", location="Remote Europe")
+            self.assertEqual(filters.classify(j, TODAY), "role", title)
+        j = Job("x", "x", "Senior Translation Project Manager", "Co", "u", location="Remote Europe")
+        self.assertEqual(filters.classify(j, TODAY), "")
+
     def test_families(self):
         cases = {"Senior Localization Producer": "localization", "Audio Lead": "audio",
                  "Lead Data Engineer": "data", "Associate Producer": "production",
@@ -237,6 +246,11 @@ class TestPieces(Base):
         self.assertEqual(verdict("Remote or Hybrid - Madrid"), "ok")
         self.assertEqual(verdict("San Francisco Bay Area or Remote (U.S.)"), "location")
         self.assertEqual(verdict("Remote - U.K."), "location")
+        self.assertEqual(verdict("Rome / remote"), "location")
+        self.assertEqual(verdict("Work Remotely - Massachusetts"), "location")
+        self.assertEqual(verdict("Herat, Herat, Afghanistan", remote=True), "location")
+        self.assertEqual(verdict("Remote Europe / Berlin"), "ok")
+        self.assertEqual(verdict("Santiago de Compostela / remote"), "ok")
         self.assertEqual(verdict("", desc="We are a remote-first studio."), "check")
         self.assertEqual(verdict("Remote", desc="Candidates must be located in Canada."), "location")
 

@@ -19,7 +19,7 @@ EU_WIDE = re.compile(
 BARE_CODES = re.compile(r"\b(?:US|USA|UK|UAE|NZ|CA)\b|\bU\.S\.(?:A\.?)?|\bU\.K\.")
 
 SPAIN = re.compile(r"\b(spain|espa[nñ]a|iberia|galicia|coru[nñ]a|madrid|"
-                   r"barcelona|valencia|sevilla|seville|bilbao|m[aá]laga)\b", re.I)
+                   r"barcelona|valencia|sevilla|seville|bilbao|m[aá]laga|compostela|vigo|zaragoza|alicante|granada)\b", re.I)
 
 BLOCKING_PLACES = re.compile(
     r"\b("
@@ -36,6 +36,37 @@ BLOCKING_PLACES = re.compile(
     r"switzerland|sweden|norway|denmark|finland|iceland|poland|czech|slovakia|"
     r"hungary|romania|bulgaria|greece|croatia|slovenia|serbia|ukraine|lithuania|"
     r"latvia|estonia|luxembourg|malta|cyprus"
+    r")\b", re.I)
+
+# Countries missing above, US states, Canadian provinces and game-industry cities
+# outside Spain. A place here counts as a restriction that excludes Spain, so
+# "Rome / remote" is treated like "Remote - Italy". (Not "Santiago": Compostela.)
+OTHER_PLACES = re.compile(
+    r"\b("
+    r"afghanistan|albania|algeria|andorra|angola|armenia|azerbaijan|bahrain|belarus|bolivia|"
+    r"bosnia|botswana|cambodia|cameroon|cuba|czechia|dominican republic|ecuador|el salvador|"
+    r"ethiopia|georgia|guatemala|honduras|iran|iraq|jamaica|jordan|kazakhstan|kosovo|kuwait|"
+    r"kyrgyzstan|laos|lebanon|libya|liechtenstein|macedonia|moldova|monaco|mongolia|montenegro|"
+    r"mozambique|myanmar|namibia|nepal|nicaragua|oman|panama|paraguay|puerto rico|russia|rwanda|"
+    r"san marino|senegal|sudan|syria|tanzania|tunisia|uganda|uzbekistan|venezuela|zambia|zimbabwe|"
+    r"alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|hawaii|"
+    r"idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|"
+    r"minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|"
+    r"new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|"
+    r"south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|wisconsin|wyoming|"
+    r"ontario|quebec|qu[eé]bec|british columbia|alberta|manitoba|saskatchewan|nova scotia|new brunswick|"
+    r"london|manchester|edinburgh|glasgow|dundee|leamington|guildford|brighton|cambridge|oxford|"
+    r"dublin|paris|lyon|montpellier|bordeaux|berlin|hamburg|munich|m[uü]nchen|frankfurt|cologne|"
+    r"k[oö]ln|d[uü]sseldorf|rome|milan|turin|amsterdam|rotterdam|utrecht|brussels|antwerp|"
+    r"stockholm|gothenburg|g[oö]teborg|malm[oö]|uppsala|helsinki|espoo|oslo|copenhagen|aarhus|"
+    r"warsaw|krak[oó]w|wroc[lł]aw|katowice|prague|brno|bratislava|budapest|bucharest|belgrade|"
+    r"zagreb|ljubljana|vienna|zurich|z[uü]rich|geneva|lisbon|porto|athens|kyiv|kiev|istanbul|"
+    r"ankara|tallinn|riga|vilnius|reykjavik|"
+    r"los angeles|san francisco|bay area|seattle|bellevue|redmond|austin|nyc|boston|chicago|"
+    r"san diego|san mateo|irvine|santa monica|denver|montr[eé]al|toronto|vancouver|ottawa|"
+    r"tokyo|osaka|seoul|shanghai|beijing|shenzhen|bangkok|manila|bangalore|bengaluru|hyderabad|"
+    r"pune|sydney|melbourne|brisbane|auckland|tel aviv|cairo|lagos|nairobi|s[aã]o paulo|"
+    r"mexico city|buenos aires|bogot[aá]"
     r")\b", re.I)
 
 ONSITE = re.compile(r"\b(on[- ]?site|onsite|hybrid|in[- ]office|office[- ]based|"
@@ -56,7 +87,7 @@ def classify_place(text: str) -> str:
         return "unclear"
     if SPAIN.search(text) or WORLDWIDE.search(text) or EU_WIDE.search(text):
         return "ok"
-    if BLOCKING_PLACES.search(text) or BARE_CODES.search(text):
+    if BLOCKING_PLACES.search(text) or BARE_CODES.search(text) or OTHER_PLACES.search(text):
         return "blocked"
     return "unclear"
 
