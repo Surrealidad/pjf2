@@ -1,5 +1,5 @@
 {
- "active": 18,
+ "active": 16,
  "boards_failed": [
   "workday:Blizzard",
   "workday:Epic Games"
@@ -7,16 +7,16 @@
  "boards_ok": 104,
  "dropped": {
   "duplicate": 1,
-  "location": 249,
-  "not remote": 71,
+  "location": 248,
+  "not remote": 72,
   "old": 52,
   "onsite": 26,
-  "role": 1918,
-  "seniority": 13
+  "role": 1906,
+  "seniority": 15
  },
- "kept": 18,
- "new": 2,
- "postings": 2348,
- "run": "2026-09-30T14:17:32Z",
- "seconds": 77
+ "kept": 16,
+ "new": 0,
+ "postings": 2336,
+ "run": "2026-10-01T07:12:46Z",
+ "seconds": 27
 }
