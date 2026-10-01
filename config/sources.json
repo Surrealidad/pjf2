@@ -4,7 +4,8 @@
    "name": "Remote Game Jobs",
    "url": "https://remotegamejobs.com/feed.rss",
    "remote": true,
-   "note": "all listings are remote"
+   "note": "all listings are remote; the scope (e.g. Remote US) is only on the job page",
+   "detail_field": "Remote scope"
   },
   {
    "name": "GameJobs.co",

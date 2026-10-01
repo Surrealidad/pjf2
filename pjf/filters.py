@@ -52,6 +52,11 @@ def family(title: str) -> str:
     return ""
 
 
+def worth_a_look(title: str) -> bool:
+    """Cheap title-only check, used before spending a request on a job page."""
+    return bool(family(title)) and not SENIORITY.search(title) and not NOT_A_ROLE.search(title)
+
+
 def classify(job: Job, today: dt.date) -> str:
     """Return a drop reason, or "" to keep. Sets job.family and job.verdict."""
     job.family = family(job.title)

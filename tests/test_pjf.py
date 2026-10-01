@@ -251,6 +251,11 @@ class TestPieces(Base):
         self.assertEqual(verdict("Herat, Herat, Afghanistan", remote=True), "location")
         self.assertEqual(verdict("Remote Europe / Berlin"), "ok")
         self.assertEqual(verdict("Santiago de Compostela / remote"), "ok")
+        self.assertEqual(verdict("", remote=True, desc="Remote scope Remote US Estimated Base Salary"), "location")
+        self.assertEqual(verdict("Remote", desc="This role is US-only."), "location")
+        self.assertEqual(verdict("Remote", desc="Open to remote (Canada) applicants"), "location")
+        self.assertEqual(verdict("Remote", desc="Fully remote, US or Europe time zones"), "check")
+        self.assertEqual(verdict("Remote", desc="Let us know. We work remote first."), "check")
         self.assertEqual(verdict("", desc="We are a remote-first studio."), "check")
         self.assertEqual(verdict("Remote", desc="Candidates must be located in Canada."), "location")
 
@@ -337,6 +342,18 @@ class TestNewSources(Base):
         self.fake.calls.clear()
         self.run_once(use_feeds=False, use_remote=False, use_workday=False)
         self.assertFalse(any("leverco" in u and "teamtailor" in u for u in self.fake.calls))
+
+    def test_feed_detail_page(self):
+        config.SOURCES_FILE.write_text(json.dumps({"feeds": [
+            {"name": "RGJ", "url": "https://feed.test/rss", "remote": True, "detail_field": "Remote scope"}]}),
+            encoding="utf-8")
+        self.fake.routes["https://example.test/rgj/1"] = (
+            b"<html><dt>Remote scope</dt><dd>Remote US</dd><p>Estimated Base Salary $95K</p></html>")
+        self.run_once(use_ats=False, use_remote=False, use_workday=False)
+        titles = {(j["title"], j["company"]) for j in self.jobs_by_title().values()}
+        self.assertNotIn(("Senior Data Analyst", "Studio A"), titles)   # Remote US, read from the page
+        # the 3D Artist item fails the role filter, so its page is never requested
+        self.assertNotIn("https://example.test/rgj/3", self.fake.calls)
 
     def test_workday_helpers(self):
         from pjf import workday

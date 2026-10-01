@@ -81,6 +81,25 @@ BODY_RESTRICTION = re.compile(
     r"(?:the\s+)?([A-Za-z .,'&/-]{3,60})", re.I)
 
 
+# "Remote US", "remote (Canada)", "US-only", "remote within the United States"...
+# Country codes stay case-sensitive so the word "us" never matches.
+REMOTE_SCOPE = re.compile(
+    r"(?i:\b(?:remote|work from home|wfh)\b)\s*[-\u2013(,:/]?\s*(?i:(?:in|within|from)\s+)?(?i:the\s+)?"
+    r"(US|USA|U\.S\.A?\.?|UK|U\.K\.|(?i:united states|canada|north america|latam|latin america|apac|india))\b"
+    r"|\b(?:US|USA|UK)[- ](?i:only|based)\b")
+
+
+def scope_verdict(text: str) -> str:
+    """blocked when the text limits the remote job to another country or region,
+    unless Europe/Spain/worldwide is named right after ("Remote US or EU")."""
+    for m in REMOTE_SCOPE.finditer(text or ""):
+        tail = text[m.end():m.end() + 40]
+        if SPAIN.search(tail) or WORLDWIDE.search(tail) or EU_WIDE.search(tail):
+            continue
+        return "blocked"
+    return "unclear"
+
+
 def classify_place(text: str) -> str:
     """ok | blocked | unclear for a short place-like string."""
     if not text or not text.strip():
@@ -103,4 +122,4 @@ def body_verdict(description: str) -> str:
         verdict = classify_place(match.group(1))
         if verdict != "unclear":
             return verdict
-    return "unclear"
+    return scope_verdict((description or "")[:6000])

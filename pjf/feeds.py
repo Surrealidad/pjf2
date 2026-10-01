@@ -2,9 +2,10 @@
 from __future__ import annotations
 
 import re
+import time
 import xml.etree.ElementTree as ET
 
-from . import net
+from . import filters, net
 from .model import Job, parse_date, strip_html
 
 ACCEPT = "application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8"
@@ -83,6 +84,33 @@ def _item_to_job(feed: dict, item: dict) -> Job:
     )
 
 
+def add_details(jobs: list[Job], field: str, log=print) -> int:
+    """For feeds whose items carry no location, read it from the job page.
+
+    Only for jobs with no location whose title passes the role filters, so a
+    run costs a handful of requests. `field` is the label on the page, e.g.
+    "Remote scope" on Remote Game Jobs. The page text also becomes the
+    description, so residency sentences in the ad are checked too."""
+    label = re.compile(re.escape(field) + r"\s*:?\s*(.{2,40})", re.I)
+    done = 0
+    for job in jobs:
+        if job.location or not job.url or not filters.worth_a_look(job.title):
+            continue
+        time.sleep(0.5)
+        status, body = net.get(job.url, 20, "text/html")
+        if status != 200:
+            continue
+        text = strip_html(body.decode("utf-8", "replace"), limit=20000)
+        m = label.search(text)
+        if m:
+            job.location = re.split(r"\s{2,}|\n", m.group(1).strip())[0][:30]
+        job.description = text[:6000]
+        done += 1
+    if done:
+        log(f"  read {done} job pages for their location")
+    return done
+
+
 def collect(feeds: list[dict], log=print):
     """Returns (jobs, board_status)."""
     jobs, status = [], {}
@@ -102,7 +130,10 @@ def collect(feeds: list[dict], log=print):
             log(f"  feed failed: {feed['name']} (not valid RSS/Atom)")
             continue
         status[board] = True
-        jobs.extend(_item_to_job(feed, it) for it in items if it.get("title"))
+        found = [_item_to_job(feed, it) for it in items if it.get("title")]
+        if feed.get("detail_field"):
+            add_details(found, feed["detail_field"], log)
+        jobs.extend(found)
     ok = sum(status.values())
     log(f"[feeds] {ok}/{len(status)} feeds OK, {len(jobs)} postings")
     return jobs, status
